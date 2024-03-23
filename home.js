@@ -36,7 +36,7 @@ setTimeout(function(){
 
 var ban=false;
 if(typeof authtoken==="undefined"||authtoken===null || authtoken===""){
-  location.href="login"
+  location.href="/login"
 }
 else{
   database.ref("login/"+authtoken).on("value",function(snap){
