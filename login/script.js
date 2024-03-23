@@ -40,8 +40,7 @@ function login(){
     if(auth_pass==user_pass&&user_ban==="no"){
       Token(76)
       database.ref("login/"+auth_token).set({
-        'user':user_name,
-        'ip':login_ip
+        'user':user_name
       })
       localStorage.authid=auth_token;
       setTimeout(function(){
@@ -49,7 +48,7 @@ function login(){
           location.href="https://connectopia.repl.co?lf=Login"
           document.getElementById("info").innerHTML="Login success <button onclick='window.history.back()'>Click here</button>"
         }
-        else if(url.includes("connectopia.repl.co")){
+        else if(url.includes("https://sharmapushkar-coder.github.io/")){
           a();
         }
         else{
