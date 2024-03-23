@@ -28,7 +28,7 @@ function login(){
     
   }
   document.getElementById("btn-create").disabled=true;
-  document.getElementById("btn-create").innerHTML="Logging In.."
+  document.getElementById("btn-create").innerHTML="Validating..."
   f=document.getElementById("username").value;
   user_name=f.replace(/\s/g, '')
   user_pass=document.getElementById("password").value;
