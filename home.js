@@ -34,7 +34,7 @@ setTimeout(function(){
 
 var ban=false;
 if(typeof authtoken==="undefined"||authtoken===null || authtoken===""){
-  location.href="sharmapushkar-coder.github.io/Disclosure/login"
+  location.href="https://sharmapushkar-coder.github.io/Disclosure/login"
 }
 else{
   database.ref("login/"+authtoken).on("value",function(snap){
@@ -56,7 +56,7 @@ setInterval(function(){
     ban=data.val().ban
   })
   if(ban==="yes"){
-    location.href="/terminated.html?from=homepage_landing"
+    location.href="https://sharmapushkar-coder.github.io/Disclosure/terminated.html?from=homepage_landing"
   }
   else{
     
