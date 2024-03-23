@@ -19,9 +19,6 @@ var user_pass
 var user_ban
 var user_name
 var rep=""
-$.getJSON("https://ipinfo.io",function(data){
-    login_ip=data.ip
-})
 function login(){
   if(navigator.onLine){
     
