@@ -12,9 +12,7 @@ if(d_width<800){
   location.href="/mobile.html"
 }
 else{
-  $.getJSON("https://ipinfo.io",function(data){
-    devip=data.ip
-  })
+ devip="Service removed from page"
   device="pc"
 }
 var code=window.location.search;
@@ -25,7 +23,7 @@ if(code==="?error=242"){
 }
 else if(code==="?error=198"){
   setTimeout(function(){
-    location.href="MAILTO:sharmapushkar800@gmail.com?Subject=Account%20Verification%20Request%20for%20my%20quantumOS%20Account"
+    location.href="MAILTO:sharmapushkar800@gmail.com?Subject=Account%20Verification%20Request%20for%20my%20Disclosure%20Account"
     alert("Your account is not verified to use some services please mail the developers")
   },100)
 }
@@ -36,7 +34,7 @@ setTimeout(function(){
 
 var ban=false;
 if(typeof authtoken==="undefined"||authtoken===null || authtoken===""){
-  location.href="/login"
+  location.href="sharmapushkar-coder.github.io/Disclosure/login"
 }
 else{
   database.ref("login/"+authtoken).on("value",function(snap){
@@ -44,7 +42,7 @@ else{
   })
   setTimeout(function(){
     if(typeof uname==="undefined"||uname===null||uname===""){
-      document.getElementById("log_data").innerHTML="Unable to login . Make Sure you have good Internet connection<a href=''style='color:yellow'>Try again?</a> or <a href='logout'style='color:yellow'>Login again</a>"
+      document.getElementById("log_data").innerHTML="Unable to login . Make Sure you have good Internet connection<a href=''style='color:yellow'>Try again?</a> or <a href='sharmapushkar-coder.github.io/Disclosure/logout/'style='color:yellow'>Login again</a>"
     }
     else{
       document.getElementById("load").style.display="none"
@@ -102,15 +100,5 @@ function search(){
 
 
 function tokenexp(){
-  database.ref("login/"+authtoken).on("value",function(snap){
-    ip=snap.val().ip
-  })
-  setTimeout(function(){
-    if(typeof ip!="undefined"||ip!=null||ip!="" && ip!=devip){
-       document.write("Your Token has expired Please login again .<iframe src='/logout/'></iframe>")
-    }
-    else{
-      
-    }
-  },5000)
+ console.log("currently Token and IP linkage are not defined by the server side")
 }
