@@ -45,7 +45,7 @@ function login(){
       localStorage.authid=auth_token;
       setTimeout(function(){
         if(typeof url==="undefined"||url===null||url===""){
-          location.href="https://connectopia.repl.co?lf=Login"
+          location.href="https://sharmapushkar-coder.github.io/Disclosure/?lf=Login"
           document.getElementById("info").innerHTML="Login success <button onclick='window.history.back()'>Click here</button>"
         }
         else if(url.includes("https://sharmapushkar-coder.github.io/")){
