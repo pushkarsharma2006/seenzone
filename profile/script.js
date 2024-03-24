@@ -56,7 +56,7 @@ setTimeout(function(){
 },5000)
 function search(){
   var user=document.getElementById("inputuser").value;
-  location.href="https://connectopia.repl.co/profile/?u="+user
+  location.href="https://sharmapushkar-coder.github.io/Disclosure/profile/?u="+user
 }
 
 
