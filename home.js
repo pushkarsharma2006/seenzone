@@ -9,7 +9,7 @@ var notification
 var d_width=screen.width;
 if(d_width<800){
   device="mobile"
-  location.href="/mobile.html"
+  location.href="https://sharmapushkar-coder.github.io/Disclosure/mobile.html"
 }
 else{
  devip="Service removed from page"
