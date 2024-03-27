@@ -12,12 +12,12 @@ setInterval(function(){
 setTimeout(function(){
         if (Notification.permission === 'granted') {
           var notification = new Notification('Message sent or received', {
-          body: 'Get more out of chat with premium . BUY NOW',
-          icon: 'https://connectopia.repl.co/maps.jpeg'
+          body: 'Get more out of a chat with premium. BUY NOW',
+          icon: 'https://sharmapushkar-coder.github.io/LOGO.JPG'
         });
 
         notification.onclick = function() {
-        window.open('http://connectopia.repl.co/plan/?noti=premium&&type=auto');
+         alert('Feature currently not available')
        };
       }          
     },3000)
@@ -33,7 +33,7 @@ else {
   }
 }
 if(typeof authtoken==="undefined"||authtoken===null||authtoken===""){
-  location.href="https://connectopia.repl.co/login"
+  location.href="https://sharmapushkar-coder.github.io/Disclosure/login"
 }
 database.ref("login/"+authtoken).on("value",function(data){
   user_data_name=data.val().user
@@ -42,7 +42,7 @@ database.ref("login/"+authtoken).on("value",function(data){
 setTimeout(function(){
   if(typeof user_data_name==="undefined"||user_data_name===null||user_data_name===""){
     alert("Login failed please login again !")
-    location.href="https://connectopia.repl.co/"
+    location.href="https://sharmapushkar-coder.github.io/Disclosure/"
   }
   else{
     database.ref("users/"+user_data_name).on("value",function(deta){
@@ -153,14 +153,16 @@ database.ref("chat").on("child_removed",function(chat){
 
 
 function l(){
-  location.href='https://chat.connectopia.repl.co/login/?authid='+authtoken
+  alert('Sorry but currently chat isn't available on Desktop , Please use a mobile device to access it ')
+  History.back()
+  //location.href='https://chat.connectopia.repl.co/login/?authid='+authtoken
 }
 setInterval(function(){
   database.ref("user/"+user_data_name).on("value",function(d){
     ban=d.val().ban
   })
   if(ban==="yes"){
-    location.href='https://connectopia.repl.co/terminated.html'
+    location.href='https://sharmapushkar-coder.github.io/terminated.html'
   }
   else{
     
