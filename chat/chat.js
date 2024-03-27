@@ -153,7 +153,7 @@ database.ref("chat").on("child_removed",function(chat){
 
 
 function l(){
-  alert('Sorry but currently chat isn"t available on Desktop , Please use a mobile device to access it ')
+  alert('Sorry but currently chat is not available on Desktop , Please use a mobile device to access it ')
   History.back()
   //location.href='https://chat.connectopia.repl.co/login/?authid='+authtoken
 }
