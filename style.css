@@ -20,16 +20,12 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-image: url('earth.svg'); /* Path to your SVG image */
+  background-image: url('https://img.freepik.com/premium-vector/indian-ocean-globe-round-planet-map-icon_176411-4374.jpg'); /* Path to your SVG image */
   background-size: cover;
   border-radius: 50%;
   animation: rotate 20s linear infinite;
 }
 
-@keyframes rotate {
-  0% { transform: translate(-50%, -50%) rotate(0deg); }
-  100% { transform: translate(-50%, -50%) rotate(360deg); }
-}
 
   /* Style the menu bar */
   .menu-bar {
@@ -203,6 +199,11 @@ textarea{
   height:80px;
   border-radius:5px;
 }
+@keyframes rotate {
+  0% { transform: translate(-50%, -50%) rotate(0deg); }
+  100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
 @-webkit-keyframes glow {
   from {
     text-shadow: 0 0 10px #eeeeee, 0 0 20px #000000, 0 0 30px #000000, 0 0 40px #000000, 
