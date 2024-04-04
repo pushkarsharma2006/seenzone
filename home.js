@@ -99,9 +99,11 @@ function toggleMenu() {
   var menu = document.getElementById("menu");
   if (menu.style.left === "-250px") {
     menu.style.left = "0";
+    document.getElementById("m").innerHTML="MENU"
   } 
   else {
     menu.style.left = "-250px";
+    document.getElementById("m").innerHTML="Close MENU"
   }
 }
 
@@ -109,5 +111,5 @@ function toggleMenu() {
 
 
 function tokenexp(){
- console.log("currently Token and IP linkage are not defined by the server side")
+  
 }
