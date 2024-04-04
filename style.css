@@ -1,13 +1,16 @@
 html,body{
-  background-color:black;
+  background-color:white;
   background-image:url('https://social.1live.repl.co/backdesktop.jpeg');
-  color:white;
+  color:black;
   background-size:cover;
 }
   /* Style the menu bar */
   .menu-bar {
     background-color: #333;
     overflow: hidden;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
   }
 
   /* Style the links inside the menu bar */
