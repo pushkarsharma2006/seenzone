@@ -95,6 +95,15 @@ function search(){
   var sname=document.getElementById('s').value;
   location.href='/profile/?u='+sname
 }
+function toggleMenu() {
+  var menu = document.getElementById("menu");
+  if (menu.style.left === "-250px") {
+    menu.style.left = "0";
+  } 
+  else {
+    menu.style.left = "-250px";
+  }
+}
 
 
 
