@@ -4,6 +4,72 @@ html,body{
   color:white;
   background-size:cover;
 }
+  /* Style the menu bar */
+  .menu-bar {
+    background-color: #333;
+    overflow: hidden;
+  }
+
+  /* Style the links inside the menu bar */
+  .menu-bar a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+
+  /* Change color on hover */
+  .menu-bar a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+
+  /* Style the dropdown button */
+  .dropdown {
+    float: left;
+    overflow: hidden;
+  }
+
+  /* Style the dropdown button */
+  .dropdown .dropbtn {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+  }
+
+  /* Style the dropdown content (hidden by default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+
+  /* Style the links inside the dropdown */
+  .dropdown-content a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+
+  /* Add a grey background color to dropdown links on hover */
+  .dropdown-content a:hover {
+    background-color: #ddd;
+  }
+
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
 .search-div{
   background-color:aqua;
   color:black;
