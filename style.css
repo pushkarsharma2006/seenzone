@@ -82,7 +82,7 @@ body {
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
-    top: 100%; /* Adjusted position */
+    bottom: 100%; /* Adjusted position */
   }
 
   /* Style the links inside the dropdown */
@@ -106,7 +106,7 @@ body {
   background-color:aqua;
   color:black;
   position:absolute;
-  left:20%;
+  left:2%;
   top:20%;
   padding:10px 10px 10px 10px;
   border-radius:5px;
