@@ -93,7 +93,7 @@ setInterval(function(){
 
 function search(){
   var sname=document.getElementById('s').value;
-  location.href='/profile/?u='+sname
+  location.href='https://sharmapushkar-coder.github.io/Disclosure/profile/?u='+sname
 }
 function toggleMenu() {
   var menu = document.getElementById("menu");
