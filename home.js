@@ -99,11 +99,11 @@ function toggleMenu() {
   var menu = document.getElementById("menu");
   if (menu.style.left === "-250px") {
     menu.style.left = "0";
-    document.getElementById("m").innerHTML="MENU"
+    document.getElementById("m").innerHTML="CLOSE MENU"
   } 
   else {
     menu.style.left = "-250px";
-    document.getElementById("m").innerHTML="Close MENU"
+    document.getElementById("m").innerHTML="MENU"
   }
 }
 
