@@ -5,7 +5,16 @@ body {
   padding: 0;
   overflow: hidden;
 }
-
+.search-div{
+  background-color:aqua;
+  color:black;
+  position:absolute;
+  left:2%;
+  top:20%;
+  padding:10px 10px 10px 10px;
+  border-radius:5px;
+  border:2px solid yellow ;
+}
 .earth-container {
   position: fixed;
   top: 0;
@@ -73,16 +82,7 @@ body {
 
 
 
-.search-div{
-  background-color:aqua;
-  color:black;
-  position:absolute;
-  left:2%;
-  top:20%;
-  padding:10px 10px 10px 10px;
-  border-radius:5px;
-  border:2px solid yellow ;
-}
+
 .top-bar{
   position:absolute;
   top:0px;
