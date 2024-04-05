@@ -31,7 +31,7 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ76S-BQIYMjNC9IXGtGsOOs9Q_l0e1-sRgdg&usqp=CAU'); /* Path to your SVG image */
+  background-image: url('https://sharmapushkar-coder.github.io/Disclosure/earth.jpg'); /* Path to your SVG image */
   background-size: cover;
   border-radius: 50%;
   animation: rotate 20s linear infinite;
