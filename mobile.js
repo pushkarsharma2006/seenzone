@@ -71,7 +71,17 @@ setInterval(function(){
   }
 },1000)
 
-
+function toggleMenu() {
+  var menu = document.getElementById("menu");
+  if (menu.style.left === "-250px") {
+    menu.style.left = "0";
+    document.getElementById("m").innerHTML="CLOSE MENU"
+  } 
+  else {
+    menu.style.left = "-250px";
+    document.getElementById("m").innerHTML="MENU"
+  }
+}
 
         function profile(){
           location.href='https://connectopia.repl.co/profile/?u='+uname
