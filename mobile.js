@@ -32,7 +32,7 @@ else{
   })
   setTimeout(function(){
     if(typeof uname==="undefined"||uname===null||uname===""){
-      document.getElementById("log_data").innerHTML="Server didn't respond . This can be due to <br>1.Your Session expired </br><br>2. Slow internet connection </br><br></br><a href=''style='color:yellow'>Try again?</a> or <a href='login'style='color:yellow'>Login again</a>"
+      document.getElementById("log_data").innerHTML="Server didn't respond . This can be due to <br>1.Your Session expired </br><br>2. Slow internet connection </br><br></br><a href=''style='color:yellow'>Try again?</a> or <a href='https://sharmapushkar-coder.github.io/Disclosure/login'style='color:yellow'>Login again</a>"
     }
     else{
       document.getElementById("load").style.display="none"
@@ -48,14 +48,14 @@ setInterval(function(){
   })
   if(ban==="yes"){
     alert('We notices something wrong with your Account . Please Refresh this page to continue')
-    location.href="https://connectopia.repl.co/terminated.html?from=m.homepage_landing"
+    location.href="https://sharmapushkar-coder.github.io/Disclosure/terminated.html?from=m.homepage_landing"
   }
   else{
     
   }
 },1000)
 function home(){
-  location.href="https://connectopia.repl.co/"
+  location.href="https://sharmapushkar-coder.github.io/Disclosure/"
 }
 setInterval(function(){
   database.ref("global").on("value",function(noti){
@@ -84,7 +84,7 @@ function toggleMenu() {
 }
 
         function profile(){
-          location.href='https://connectopia.repl.co/profile/?u='+uname
+          location.href='https://sharmapushkar-coder.github.io/Disclosure/profile/?u='+uname
         }
 
 
@@ -94,7 +94,7 @@ function toggleMenu() {
 
       }
       else{
-       location.href="https://connectopia.repl.co/profile/?u="+usearch
+       location.href="https://sharmapushkar-coder.github.io/Disclosure/profile/?u="+usearch
       }
       
     }
