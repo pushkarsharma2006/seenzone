@@ -5,6 +5,23 @@ body {
   padding: 0;
   overflow: hidden;
 }
+.pubg-btn {
+  background-color: #2f2f2f;
+  border: 2px solid #f3b63a;
+  color: #f3b63a;
+  width:98%;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 15px 30px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.pubg-btn:hover {
+  background-color: #f3b63a;
+  color: #2f2f2f;
+}
 .search-div{
   background-color:aqua;
   color:black;
