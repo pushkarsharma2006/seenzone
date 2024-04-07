@@ -73,12 +73,12 @@ setInterval(function(){
 
 function toggleMenu() {
   var menu = document.getElementById("menu");
-  if (menu.style.left === "-250px") {
+  if (menu.style.left === "-300px") {
     menu.style.left = "0";
     document.getElementById("m").innerHTML="CLOSE MENU"
   } 
   else {
-    menu.style.left = "-250px";
+    menu.style.left = "-300px";
     document.getElementById("m").innerHTML="MENU"
   }
 }
