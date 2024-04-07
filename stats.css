@@ -23,12 +23,6 @@ body, html {
   height: 100%;
   animation: rotate 20s linear infinite; /* Adjust duration and timing function as needed */
 }
-
-@keyframes rotate {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
-
 .content {
   position: relative;
   z-index: 1; /* Ensure the content appears above the Earth */
@@ -215,6 +209,11 @@ iframe{
   -moz-animation: glow 1s ease-in-out infinite alternate;
   animation: glow 1s ease-in-out infinite alternate;
 }
+@keyframes rotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
 
 @-webkit-keyframes glow {
   from {
