@@ -6,6 +6,23 @@ html,body{
   background-size: cover;
   background-color:white;
 }
+.pubg-btn {
+  background-color: #2f2f2f;
+  border: 2px solid #f3b63a;
+  color: #f3b63a;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 15px 30px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.pubg-btn:hover {
+  background-color: #f3b63a;
+  color: #2f2f2f;
+}
+
 .menu {
   position: fixed;
   top: 0;
