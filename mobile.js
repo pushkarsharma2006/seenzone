@@ -4,6 +4,7 @@ var uname,width,height
 var device
 var home_visit=0;
 var code=window.location.search;
+changeWallpaper()
 if(code==="?error=242"){
   setTimeout(function(){
     document.getElementById("info").style.display="block"
@@ -86,6 +87,13 @@ function toggleMenu() {
         function profile(){
           location.href='https://sharmapushkar-coder.github.io/Disclosure/profile/?u='+uname
         }
+ function changeWallpaper() {
+  var background = document.getElementById("background-image");
+  var images = ["https://sharmapushkar-coder.github.io/Disclosure/wallpaper1.webp", "https://sharmapushkar-coder.github.io/Disclosure/wallpaper2.webp", "https://sharmapushkar-coder.github.io/Disclosure/wallpaper4.webp","https://sharmapushkar-coder.github.io/Disclosure/wallpaper5.jpg","https://sharmapushkar-coder.github.io/Disclosure/wallpaper6.jpg","https://sharmapushkar-coder.github.io/Disclosure/wallpaper7.jpg","https://sharmapushkar-coder.github.io/Disclosure/wallpaper8.jpg","https://sharmapushkar-coder.github.io/Disclosure/wallpaper9.jpg"]; // Paths to your images
+  var randomIndex = Math.floor(Math.random() * images.length);
+  var imageUrl = images[randomIndex];
+  background.style.backgroundImage = "url('" + imageUrl + "')";
+}
 
 
     function Search(){
