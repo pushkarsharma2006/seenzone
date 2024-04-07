@@ -115,7 +115,7 @@ h1 {
 /* Media query for mobile devices */
 @media only screen and (max-width: 600px) {
   .menu {
-    width: 200px; /* Adjust menu width for smaller screens */
+    width: 280px; /* Adjust menu width for smaller screens */
   }
 
   .menu-btn {
