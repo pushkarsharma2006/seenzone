@@ -17,39 +17,6 @@ body, html {
   z-index: -1; /* Ensure the image is behind the content */
 }
 
-.content {
-  position: relative;
-  z-index: 1; /* Ensure the content appears above the background image */
-  padding: 20px;
-}
-
-h1 {
-  color: #fff;
-  text-align: center;
-}
-
-.earth-container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url('https://sharmapushkar-coder.github.io/Disclosure/earth.jpg'); /* Path to your Earth image */
-  background-size: cover;
-  z-index: -1; /* Ensure the Earth is behind the content */
-}
-
-.earth {
-  width: 100%;
-  height: 100%;
-  animation: rotate 20s linear infinite; /* Adjust duration and timing function as needed */
-}
-.content {
-  position: relative;
-  z-index: 1; /* Ensure the content appears above the Earth */
-  padding: 20px;
-}
-
 h1 {
   color: #fff;
   text-align: center;
