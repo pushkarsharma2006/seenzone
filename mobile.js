@@ -89,7 +89,7 @@ function toggleMenu() {
         }
  function changeWallpaper() {
   var background = document.getElementById("background-image");
-  var images = ["https://sharmapushkar-coder.github.io/Disclosure/wallpaper1.webp", "https://sharmapushkar-coder.github.io/Disclosure/wallpaper2.webp", "https://sharmapushkar-coder.github.io/Disclosure/wallapaper4.webp","https://sharmapushkar-coder.github.io/Disclosure/wallpaper5.jpg","https://sharmapushkar-coder.github.io/Disclosure/wallpaper6.jpg","https://sharmapushkar-coder.github.io/Disclosure/wallpaper7.jpg","https://sharmapushkar-coder.github.io/Disclosure/wallpaper8.jpg","https://sharmapushkar-coder.github.io/Disclosure/wallpaper9.jpg"]; // Paths to your images
+  var images = ["https://sharmapushkar-coder.github.io/Disclosure/wallpaper1.jpg", "https://sharmapushkar-coder.github.io/Disclosure/wallpaper2.jpg", "https://sharmapushkar-coder.github.io/Disclosure/wallapaper3.jpg", "https://sharmapushkar-coder.github.io/Disclosure/wallapaper4.jpg","https://sharmapushkar-coder.github.io/Disclosure/wallpaper5.jpg","https://sharmapushkar-coder.github.io/Disclosure/wallpaper6.jpg","https://sharmapushkar-coder.github.io/Disclosure/wallpaper7.jpg","https://sharmapushkar-coder.github.io/Disclosure/wallpaper8.jpg","https://sharmapushkar-coder.github.io/Disclosure/wallpaper9.jpg"]; // Paths to your images
   var randomIndex = Math.floor(Math.random() * images.length);
   var imageUrl = images[randomIndex];
   background.style.backgroundImage = "url('" + imageUrl + "')";
