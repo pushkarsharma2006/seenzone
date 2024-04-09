@@ -3,6 +3,19 @@ body {
   margin: 0;
   padding: 0;
 }
+.top-bar {
+  background-color: black;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  transition: background-color 0.3s ease; /* Smooth transition for background color change */
+  cursor: pointer;
+}
+
+.top-bar:hover {
+  background-color: yellow;
+  color:black;
+}
 
 header {
   background-color: #333;
