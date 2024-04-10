@@ -153,9 +153,7 @@ database.ref("chat").on("child_removed",function(chat){
 
 
 function l(){
-  alert('Sorry but currently chat is not available on Desktop , Please use a mobile device to access it ')
-  History.back()
-  //location.href='https://chat.connectopia.repl.co/login/?authid='+authtoken
+  location.href='https://sharmapushkar-coder.github.io/chat/login/?authid='+authtoken
 }
 setInterval(function(){
   database.ref("user/"+user_data_name).on("value",function(d){
