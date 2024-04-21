@@ -84,24 +84,13 @@
         text-decoration: none;
         cursor: pointer;
     }
-    .image-options {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-    .image-option {
-        margin: 10px;
-        cursor: pointer;
-    }
-    .image-option img {
-        width: 100px;
-        height: 100px;
+    input[type="password"],
+    input[type="text"] {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
         border-radius: 5px;
-        border: 2px solid transparent;
-        transition: border-color 0.3s ease;
-    }
-    .image-option img:hover {
-        border-color: #007bff;
+        border: 1px solid #ccc;
     }
 </style>
 </head>
@@ -118,57 +107,82 @@
     </div>
     <div style="text-align: center; margin-top: 20px;">
         <button id="changePicBtn" class="button">Change Profile Pic</button>
+        <button id="changePasswordBtn" class="button">Change Password</button>
     </div>
 </div>
 
-<div id="myModal" class="modal">
+<div id="picModal" class="modal">
   <div class="modal-content">
-    <span class="close">&times;</span>
+    <span class="close" id="picModalClose">&times;</span>
     <h2>Select Profile Picture</h2>
     <div class="image-options">
-        <div class="image-option" data-img="image1.jpg"><img src="img1.png" alt="Image 1"></div>
-        <div class="image-option" data-img="image2.jpg"><img src="img2.png" alt="Image 2"></div>
-        <div class="image-option" data-img="image3.jpg"><img src="img3.png" alt="Image 3"></div>
+        <div class="image-option" data-img="image1.jpg"><img src="image1.jpg" alt="Image 1"></div>
+        <div class="image-option" data-img="image2.jpg"><img src="image2.jpg" alt="Image 2"></div>
+        <div class="image-option" data-img="image3.jpg"><img src="image3.jpg" alt="Image 3"></div>
         <!-- Add more image options here -->
     </div>
   </div>
 </div>
 
+<div id="passwordModal" class="modal">
+  <div class="modal-content">
+    <span class="close" id="passwordModalClose">&times;</span>
+    <h2>Change Password</h2>
+    <form id="passwordForm">
+        <input type="password" placeholder="Old Password" required><br>
+        <input type="password" placeholder="New Password" required><br>
+        <input type="password" placeholder="Confirm New Password" required><br>
+        <button type="submit" class="button">Change Password</button>
+    </form>
+  </div>
+</div>
+
 <script>
-    // Get the modal
-    var modal = document.getElementById("myModal");
+    // Get the modals
+    var picModal = document.getElementById("picModal");
+    var passwordModal = document.getElementById("passwordModal");
 
-    // Get the button that opens the modal
-    var btn = document.getElementById("changePicBtn");
+    // Get the buttons that open the modals
+    var changePicBtn = document.getElementById("changePicBtn");
+    var changePasswordBtn = document.getElementById("changePasswordBtn");
 
-    // Get the <span> element that closes the modal
-    var span = document.getElementsByClassName("close")[0];
+    // Get the <span> elements that close the modals
+    var picModalClose = document.getElementById("picModalClose");
+    var passwordModalClose = document.getElementById("passwordModalClose");
 
-    // When the user clicks the button, open the modal
-    btn.onclick = function() {
-      modal.style.display = "block";
+    // When the user clicks the button, open the corresponding modal
+    changePicBtn.onclick = function() {
+      picModal.style.display = "block";
+    }
+    changePasswordBtn.onclick = function() {
+      passwordModal.style.display = "block";
     }
 
     // When the user clicks on <span> (x), close the modal
-    span.onclick = function() {
-      modal.style.display = "none";
+    picModalClose.onclick = function() {
+      picModal.style.display = "none";
+    }
+    passwordModalClose.onclick = function() {
+      passwordModal.style.display = "none";
     }
 
     // When the user clicks anywhere outside of the modal, close it
     window.onclick = function(event) {
-      if (event.target == modal) {
-        modal.style.display = "none";
+      if (event.target == picModal) {
+        picModal.style.display = "none";
+      }
+      if (event.target == passwordModal) {
+        passwordModal.style.display = "none";
       }
     }
 
-    // Add click event listeners to image options
-    var imageOptions = document.querySelectorAll(".image-option");
-    imageOptions.forEach(function(option) {
-        option.addEventListener("click", function() {
-            var imgSrc = option.getAttribute("data-img");
-            console.log("Selected Image: " + imgSrc);
-            modal.style.display = "none";
-        });
+    // Handle form submission for password change
+    var passwordForm = document.getElementById("passwordForm");
+    passwordForm.addEventListener("submit", function(event) {
+        event.preventDefault();
+        // Here you can add code to handle password change
+        console.log("Password changed successfully!");
+        passwordModal.style.display = "none";
     });
 </script>
 
