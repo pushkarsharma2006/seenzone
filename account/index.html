@@ -63,14 +63,17 @@
         width: 100%;
         height: 100%;
         background-color: rgba(0, 0, 0, 0.5);
+        overflow: auto; /* Enable scroll if needed */
     }
     .modal-content {
         background-color: #fefefe;
         margin: 20% auto;
-        padding: 20px 20px 20px 20px;
+        padding: 20px;
         border-radius: 10px;
         max-width: 400px;
         text-align: center;
+        max-height: 80%; /* Adjust this value as needed */
+        overflow-y: auto; /* Enable vertical scroll */
     }
     .close {
         color: #aaa;
@@ -92,22 +95,26 @@
         border-radius: 5px;
         border: 1px solid #ccc;
     }
+    .image-options {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .image-option {
+        margin: 10px;
+        cursor: pointer;
+    }
+    .image-option img {
+        width: 100px;
+        height: 100px;
+        border-radius: 5px;
+        border: 2px solid transparent;
+        transition: border-color 0.3s ease;
+    }
+    .image-option img:hover {
+        border-color: #007bff;
+    }
 </style>
-   <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-app.js"></script> 
-   <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-database.js"></script>
-   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1750533681824200"crossorigin="anonymous"></script>
-   <script>
-    var firebaseConfig = {
-    apiKey: "AIzaSyDvekSO0AspCgWZyIW4fPH68nlgC1vk5bU",
-    authDomain: "dr-bot-cvsd.firebaseapp.com",
-    databaseURL: "https://dr-bot-cvsd-default-rtdb.firebaseio.com",
-    projectId: "dr-bot-cvsd",
-    storageBucket: "dr-bot-cvsd.appspot.com",
-    messagingSenderId: "309042927466",
-    appId: "1:309042927466:web:add9de192718a550e43713"
-    };
-   firebase.initializeApp(firebaseConfig);
- </script>
 </head>
 <body>
 
@@ -131,16 +138,10 @@
     <span class="close" id="picModalClose">&times;</span>
     <h2>Select Profile Picture</h2>
     <div class="image-options">
-        <div class="image-option" data-img="image1.jpg"><img src="img1.png" alt="Image 1"></div>
-        <div class="image-option" data-img="image2.jpg"><img src="img2.png" alt="Image 2"></div>
-        <div class="image-option" data-img="image3.jpg"><img src="img3.png" alt="Image 3"></div>
-        <div class="image-option" data-img="image1.jpg"><img src="img4.png" alt="Image 4"></div>
-        <div class="image-option" data-img="image2.jpg"><img src="img5.png" alt="Image 5"></div>
-        <div class="image-option" data-img="image3.jpg"><img src="img6.png" alt="Image 6"></div>
-        <div class="image-option" data-img="image1.jpg"><img src="img7.png" alt="Image 7"></div>
-        <div class="image-option" data-img="image2.jpg"><img src="img8.png" alt="Image 8"></div>
-        <div class="image-option" data-img="image3.jpg"><img src="img9.png" alt="Image 9"></div>
-        <div class="image-option" data-img="image1.jpg"><img src="img10.png" alt="Image 10"></div>
+        <!-- Insert your images here -->
+        <div class="image-option" data-img="image1.jpg"><img src="image1.jpg" alt="Image 1"></div>
+        <div class="image-option" data-img="image2.jpg"><img src="image2.jpg" alt="Image 2"></div>
+        <div class="image-option" data-img="image3.jpg"><img src="image3.jpg" alt="Image 3"></div>
         <!-- Add more image options here -->
     </div>
   </div>
