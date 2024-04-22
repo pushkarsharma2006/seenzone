@@ -60,7 +60,6 @@
         z-index: 1;
         left: 0;
         top: 0;
-        padding:5px 5px 5px 5px;
         width: 100%;
         height: 100%;
         background-color: rgba(0, 0, 0, 0.5);
@@ -122,8 +121,8 @@
 <div class="container">
     <h1>Account Details</h1>
     <div class="details">
-        <p><span class="label">Name:</span> John Doe</p>
-        <p><span class="label">Username:</span> johndoe123</p>
+        <p><span class="label">Name:</span> Pushkar</p>
+        <p><span class="label">Username:</span> pushkar123</p>
         <p><span class="label">Date of Birth:</span> January 1, 1990</p>
         <p><span class="label">Email:</span> <a href="mailto:example@example.com" class="email">example@example.com</a></p>
         <p><span class="label">Date of Joining:</span> April 21, 2024</p>
@@ -168,47 +167,53 @@
 </div>
 
 <script>
-    // Get the modals
+    // Get the modals and close buttons
     var picModal = document.getElementById("picModal");
     var passwordModal = document.getElementById("passwordModal");
-
-    // Get the buttons that open the modals
-    var changePicBtn = document.getElementById("changePicBtn");
-    var changePasswordBtn = document.getElementById("changePasswordBtn");
-
-    // Get the <span> elements that close the modals
     var picModalClose = document.getElementById("picModalClose");
     var passwordModalClose = document.getElementById("passwordModalClose");
 
-    // When the user clicks the button, open the corresponding modal
-    changePicBtn.onclick = function() {
-      picModal.style.display = "block";
-    }
-    changePasswordBtn.onclick = function() {
-      passwordModal.style.display = "block";
-    }
+    // Get all image options
+    var imageOptions = document.querySelectorAll(".image-option");
 
-    // When the user clicks on <span> (x), close the modal
-    picModalClose.onclick = function() {
-      picModal.style.display = "none";
-    }
-    passwordModalClose.onclick = function() {
-      passwordModal.style.display = "none";
-    }
+    // Add click event listener to each image option
+    imageOptions.forEach(function(option) {
+        option.addEventListener("click", function() {
+            var imgUrl = option.getAttribute("data-img");
+            console.log("Selected image URL:", imgUrl);
+        });
+    });
 
-    // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function(event) {
-      if (event.target == picModal) {
+    // Open the modals when corresponding buttons are clicked
+    document.getElementById("changePicBtn").addEventListener("click", function() {
+        picModal.style.display = "block";
+    });
+
+    document.getElementById("changePasswordBtn").addEventListener("click", function() {
+        passwordModal.style.display = "block";
+    });
+
+    // Close the modals when the close buttons are clicked
+    picModalClose.addEventListener("click", function() {
         picModal.style.display = "none";
-      }
-      if (event.target == passwordModal) {
+    });
+
+    passwordModalClose.addEventListener("click", function() {
         passwordModal.style.display = "none";
-      }
-    }
+    });
+
+    // Close the modals when clicking outside the modal content
+    window.addEventListener("click", function(event) {
+        if (event.target == picModal) {
+            picModal.style.display = "none";
+        }
+        if (event.target == passwordModal) {
+            passwordModal.style.display = "none";
+        }
+    });
 
     // Handle form submission for password change
-    var passwordForm = document.getElementById("passwordForm");
-    passwordForm.addEventListener("submit", function(event) {
+    document.getElementById("passwordForm").addEventListener("submit", function(event) {
         event.preventDefault();
         // Here you can add code to handle password change
         console.log("Password changed successfully!");
