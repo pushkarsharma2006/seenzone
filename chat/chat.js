@@ -82,7 +82,7 @@ setTimeout(function(){
      })
   }
   else if(verified==="no"){
-       location.href="https://connectopia.repl.co/about/Activation.html"
+       document.write('<h1>YOUR ACCOUNT IS NOT VERIFIED TO USE THIS SERVICE.PLEASE SUBMIT TICKET AT THE FEEDBACK CENTER</h1>')
     }
   else{
     document.write("<h1>:(</h1>There was an error while launching this application . Please refresh to try again.")
