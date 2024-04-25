@@ -13,7 +13,7 @@ setTimeout(function(){
         if (Notification.permission === 'granted') {
           var notification = new Notification('Message sent or received', {
           body: 'Get more out of a chat with premium. BUY NOW',
-          icon: 'https://sharmapushkar-coder.github.io/LOGO.JPG'
+          icon: 'https://sharmapushkar-coder.github.io/socioai/LOGO.png'
         });
 
         notification.onclick = function() {
@@ -25,7 +25,7 @@ if ( screen.width>800 ) {
   l()
 } 
 else {      
-  if(navigator.userAgent==="quantumapp.android"){
+  if(navigator.userAgent==="developer code here"){
   
   }
   else{
@@ -33,7 +33,7 @@ else {
   }
 }
 if(typeof authtoken==="undefined"||authtoken===null||authtoken===""){
-  location.href="https://sharmapushkar-coder.github.io/Disclosure/login"
+  location.href="https://sharmapushkar-coder.github.io/socioai/login"
 }
 database.ref("login/"+authtoken).on("value",function(data){
   user_data_name=data.val().user
@@ -42,7 +42,7 @@ database.ref("login/"+authtoken).on("value",function(data){
 setTimeout(function(){
   if(typeof user_data_name==="undefined"||user_data_name===null||user_data_name===""){
     alert("Login failed please login again !")
-    location.href="https://sharmapushkar-coder.github.io/Disclosure/"
+    location.href="https://sharmapushkar-coder.github.io/socioai/"
   }
   else{
     database.ref("users/"+user_data_name).on("value",function(deta){
