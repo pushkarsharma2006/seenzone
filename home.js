@@ -9,7 +9,7 @@ var notification
 var d_width=screen.width;
 if(d_width<800){
   device="mobile"
-  location.href="https://sharmapushkar-coder.github.io/Disclosure/mobile.html"
+  location.href="https://sharmapushkar-coder.github.io/socioai/mobile.html"
 }
 else{
  devip="Service removed from page"
@@ -34,7 +34,7 @@ setTimeout(function(){
 
 var ban=false;
 if(typeof authtoken==="undefined"||authtoken===null || authtoken===""){
-  location.href="https://sharmapushkar-coder.github.io/Disclosure/login"
+  location.href="https://sharmapushkar-coder.github.io/socioai/login"
 }
 else{
   database.ref("login/"+authtoken).on("value",function(snap){
@@ -56,7 +56,7 @@ setInterval(function(){
     ban=data.val().ban
   })
   if(ban==="yes"){
-    location.href="https://sharmapushkar-coder.github.io/Disclosure/terminated.html?from=homepage_landing"
+    location.href="https://sharmapushkar-coder.github.io/socioai/terminated.html?from=homepage_landing"
   }
   else{
     
@@ -93,7 +93,7 @@ setInterval(function(){
 
 function search(){
   var sname=document.getElementById('s').value;
-  location.href='https://sharmapushkar-coder.github.io/Disclosure/profile/?u='+sname
+  location.href='https://sharmapushkar-coder.github.io/socioai/profile/?u='+sname
 }
 function toggleMenu() {
   var menu = document.getElementById("menu");
