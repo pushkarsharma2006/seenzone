@@ -2,7 +2,7 @@ var url=window.location.search;
 var u=url.replace('?continue=','')
 var token=localStorage.getItem("authid")
 if(typeof token==="undefined"||token===null||token===""){
-  location.href="https://sharmapushkar-coder.github.io/Disclosure/login/?continue="+u
+  location.href="https://sharmapushkar-coder.github.io/socioai/login/?continue="+u
 }
 else{
   s()
