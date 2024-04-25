@@ -38,11 +38,11 @@ function create(){
         'ban':'no',
          'plan':'basic'
        })
-       setTimeout(function(){location.href="https://sharmapushkar-coder.github.io/Disclosure/?newu="+username},3000)
+       setTimeout(function(){location.href="https://sharmapushkar-coder.github.io/socioai/login/?newu="+username},3000)
     }
     else{
       alert("username already taken ")
-      location.href="https://sharmapushkar-coder.github.io/Disclosure/register#UTcode="+Math.random(0,1000)
+      location.href="https://sharmapushkar-coder.github.io/socioai/register#UTcode="+Math.random(0,1000)
     }
     },5000)
     
