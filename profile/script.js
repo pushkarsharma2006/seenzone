@@ -56,7 +56,7 @@ setTimeout(function(){
 },5000)
 function search(){
   var user=document.getElementById("inputuser").value;
-  location.href="https://sharmapushkar-coder.github.io/Disclosure/profile/?u="+user
+  location.href="https://sharmapushkar-coder.github.io/socioai/profile/?u="+user
 }
 
 
