@@ -10,7 +10,7 @@ else{
   document.write("<button onclick='window.history.back()'>Go Back</button>")
 }
 
-
+autofil()
 function submit(){
   document.getElementById("sub").disabled=true;
   document.getElementById("sub").innerHTML="Ticket Submitted"
