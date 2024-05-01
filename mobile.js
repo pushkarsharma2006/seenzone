@@ -4,7 +4,9 @@ var uname,width,height
 var device
 var home_visit=0;
 var code=window.location.search;
-changeWallpaper()
+setInterval(function(){
+  changeWallpaper()
+},5000)
 if(code==="?error=242"){
   setTimeout(function(){
     document.getElementById("info").style.display="block"
@@ -88,7 +90,7 @@ function toggleMenu() {
         }
  function changeWallpaper() {
   var background = document.getElementById("background-image");
-  var images = ["https://sharmapushkar-coder.github.io/socioai/wallpaper1.jpg", "https://sharmapushkar-coder.github.io/socioai/wallpaper2.jpg", "https://sharmapushkar-coder.github.io/socioai/wallapaper3.jpg", "https://sharmapushkar-coder.github.io/socioai/wallapaper4.jpg","https://sharmapushkar-coder.github.io/socioai/wallpaper5.jpg","https://sharmapushkar-coder.github.io/socioai/wallpaper6.jpg","https://sharmapushkar-coder.github.io/socioai/wallpaper7.jpg","https://sharmapushkar-coder.github.io/socioai/wallpaper8.jpg","https://sharmapushkar-coder.github.io/socioai/wallpaper9.jpg"]; // Paths to your images
+  var images = ["https://sharmapushkar-coder.github.io/socioai/wallpaper1.jpg", "https://sharmapushkar-coder.github.io/socioai/wallpaper2.jpg", "https://sharmapushkar-coder.github.io/socioai/wallapaper3.jpg", "https://sharmapushkar-coder.github.io/socioai/wallapaper4.jpg","https://sharmapushkar-coder.github.io/socioai/wallpaper5.jpg","https://sharmapushkar-coder.github.io/socioai/wallpaper6.jpg","https://sharmapushkar-coder.github.io/socioai/wallpaper7.jpg","https://sharmapushkar-coder.github.io/socioai/wallpaper8.jpg","https://sharmapushkar-coder.github.io/socioai/wallpaper9.jpg","https://sharmapushkar-coder.github.io/socioai/img12.png","https://sharmapushkar-coder.github.io/socioai/img13.png","https://sharmapushkar-coder.github.io/socioai/img14.png","https://sharmapushkar-coder.github.io/socioai/img15.png","https://sharmapushkar-coder.github.io/socioai/img16.png","https://sharmapushkar-coder.github.io/socioai/img17.png","https://sharmapushkar-coder.github.io/socioai/img18.png"]; // Paths to your images
   var randomIndex = Math.floor(Math.random() * images.length);
   var imageUrl = images[randomIndex];
   background.style.backgroundImage = "url('" + imageUrl + "')";
