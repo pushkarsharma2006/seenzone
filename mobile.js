@@ -6,7 +6,7 @@ var home_visit=0;
 var code=window.location.search;
 setInterval(function(){
   changeWallpaper()
-},30000)
+},60000)
 if(code==="?error=242"){
   setTimeout(function(){
     document.getElementById("info").style.display="block"
