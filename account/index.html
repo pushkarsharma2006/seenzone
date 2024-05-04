@@ -4,6 +4,21 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Account Details</title>
+  <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-app.js"></script> 
+  <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-database.js"></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1750533681824200"crossorigin="anonymous"></script>
+  <script>
+  var firebaseConfig = {
+  apiKey: "AIzaSyDvekSO0AspCgWZyIW4fPH68nlgC1vk5bU",
+  authDomain: "dr-bot-cvsd.firebaseapp.com",
+  databaseURL: "https://dr-bot-cvsd-default-rtdb.firebaseio.com",
+  projectId: "dr-bot-cvsd",
+  storageBucket: "dr-bot-cvsd.appspot.com",
+  messagingSenderId: "309042927466",
+  appId: "1:309042927466:web:add9de192718a550e43713"
+  };
+  firebase.initializeApp(firebaseConfig);
+</script>
 <style>
     body {
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -69,7 +84,7 @@
     .modal-content {
         background-color: #fefefe;
         margin: 20% auto;
-        padding: 20px;
+        padding: 10px 10px 10px 10px;
         border-radius: 10px;
         max-width: 400px;
         text-align: center;
@@ -122,11 +137,11 @@
 <div class="container">
     <h1>Account Details</h1>
     <div class="details">
-        <p><span class="label">Name:</span> Pushkar</p>
-        <p><span class="label">Username:</span> pushkar123</p>
-        <p><span class="label">Date of Birth:</span> January 1, 1990</p>
-        <p><span class="label">Email:</span> <a href="mailto:example@example.com" class="email">example@example.com</a></p>
-        <p><span class="label">Date of Joining:</span> April 21, 2024</p>
+        <p id="name"><span class="label">Name:</span> Syncing..</p>
+        <p id="username"><span class="label">Username:</span> syncing..</p>
+        <p id="dob"><span class="label">Date of Birth:</span> Fetching..</p>
+        <p id="email"><span class="label">Email:</span> <a href="mailto:example@example.com" class="email">Fetching...</a></p>
+        <p id="join"><span class="label" >Date of Joining:</span> 2024</p>
     </div>
     <div style="text-align: center; margin-top: 20px;">
         <button id="changePicBtn" class="button">Change Profile Pic</button>
@@ -159,10 +174,10 @@
     <span class="close" id="passwordModalClose">&times;</span>
     <h2>Change Password</h2>
     <form id="passwordForm">
-        <input type="password" placeholder="Old Password" required><br>
-        <input type="password" placeholder="New Password" required><br>
-        <input type="password" placeholder="Confirm New Password" required><br>
-        <button type="submit" class="button">Change Password</button>
+        <input type="password" id="old-pass"placeholder="Old Password" required><br>
+        <input type="password" id="newpass1"placeholder="New Password" required><br>
+        <input type="password" id="newpass2" placeholder="Confirm New Password" required><br>
+        <button type="submit"onclick="changepass()" class="button">Change Password</button>
     </form>
   </div>
 </div>
