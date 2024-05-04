@@ -3,14 +3,9 @@ var database=firebase.database();
 var token=localStorage.getItem("authid")
 console.log("Connecting to the auth id ::::: "+token+" (Donot copy this!!!!!)")
 var user="Not found <a href=''>Try Again</a>"
-var name=document.getElementById("name")
-var username=document.getElementById("username")
-var dob=document.getElementById("dob")
-var join=document.getElementById("join")
-var mail=document.getElementById("email")
 setTimeout(function(){
   database.ref("login/"+token).on("value",function(snap){
     user=snap.val().user
   })
-  name.innerHTML=user
+  document.getElementById("name").innerHTML="<span class='label'>NAME:</span>"+user
 },3000)
