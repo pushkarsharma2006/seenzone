@@ -8,4 +8,8 @@ setTimeout(function(){
     user=snap.val().user
   })
   document.getElementById("name").innerHTML="<span class='label'>NAME:</span>"+user
-},3000)
+},6000)
+setTimeout(function() {
+    var loadingDiv = document.getElementById('loading-div');
+    loadingDiv.style.display = 'none';
+}, 6000);
