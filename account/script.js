@@ -6,14 +6,18 @@ if(typeof token==="undefined"||token===""||token===null){
   location.href="https://sharmapushkar-coder.github.io/socioai/login/?continue=https://sharmapushkar-coder.github.io/socioai/account"
 }
 else{
-  console.log("Connecting to the auth id ::::: "+token+" (Donot copy this!!!!!)")
-  var user="Not found <a href=''>Try Again</a>"
+  var name=localStorage.getItem("name");
+  var email=localStorage.getItem("mail");
+  var dateofjoin=localStorage.getItem("DOJ");
+  var dob=localStorage.getItem("dob");
+  var username=localStorage.getItem("username");
   setTimeout(function(){
-    database.ref("login/"+token).on("value",function(snap){
-      user=snap.val().user
-    })
-    document.getElementById("name").innerHTML="<span class='label'>NAME:</span>"+user
-  },6000)
+    document.getElementById("username").innerHTML="<span class='label'>Username:</span>"+username
+    document.getElementById("name").innerHTML="<span class='label'>Name:</span>"+name
+    document.getElementById("join").innerHTML="<span class='label'>Date of Joining:</span>"+dateofjoin
+    document.getElementById("dob").innerHTML="<span class='label'>Date of Birth</span>"+dob
+    document.getElementById("email").innerHTML="<span class='label'>Email:</span>"+email
+  },2000)
 }
 
 
