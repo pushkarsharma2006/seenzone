@@ -15,7 +15,7 @@ else{
     document.getElementById("username").innerHTML="<span class='label'>Username:</span>"+username
     document.getElementById("name").innerHTML="<span class='label'>Name:</span>"+name
     document.getElementById("join").innerHTML="<span class='label'>Date of Joining:</span>"+dateofjoin
-    document.getElementById("dob").innerHTML="<span class='label'>Date of Birth</span>"+dob
+    document.getElementById("dob").innerHTML="<span class='label'>Date of Birth:</span>"+dob
     document.getElementById("email").innerHTML="<span class='label'>Email:</span>"+email
   },2000)
 }
