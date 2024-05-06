@@ -207,6 +207,8 @@
 </div>
 
 <script>
+    var server=firebase.database();
+    var username=localStorage.getItem("username")
     // Get the modals and close buttons
     var picModal = document.getElementById("picModal");
     var passwordModal = document.getElementById("passwordModal");
@@ -220,7 +222,9 @@
     imageOptions.forEach(function(option) {
         option.addEventListener("click", function() {
             var imgUrl = option.getAttribute("data-img");
-            console.log("Selected image URL:", imgUrl);
+            server.ref("profilepic/"+username).set({
+              'pic':imgUrl
+            })
         });
     });
 
