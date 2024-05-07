@@ -35,7 +35,7 @@ function fetch(){
    server.ref("login/"+authid).on("value",function(snapshot){
     username=snapshot.val().user
    })
-  server.ref("user/"+username).on("value",function(snap){
+  server.ref("users/"+username).on("value",function(snap){
     name=snap.val().name,
     doj=snap.val().Created,
     email=snap.val().Email
