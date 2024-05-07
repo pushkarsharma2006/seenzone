@@ -27,4 +27,4 @@ else{
 setTimeout(function() {
     var loadingDiv = document.getElementById('loading-div');
     loadingDiv.style.display = 'none';
-}, 6000);
+}, 2000);
