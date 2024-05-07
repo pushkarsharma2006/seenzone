@@ -37,7 +37,7 @@ function fetch(){
   server.ref("user/"+username).on("value",function(snap){
     name=snap.val().name,
     doj=snap.val().Created,
-    email=snap.val().Email,
+    email=snap.val().Email
   })
 }
 setInterval(function(){
