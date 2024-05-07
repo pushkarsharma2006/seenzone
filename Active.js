@@ -5,6 +5,7 @@ var time
 var date,month,year,hour,min,sec,newdate,dateObj
 var crl=window.location.href
 setInterval(function(){
+  fetch()
   if(typeof username==="undefined"||username===null||username===""){
     fetch()
   }
