@@ -1,6 +1,6 @@
 var server=firebase.database();
 var authid=localStorage.getItem("authid")
-var username
+var username,name,email,dob,doj
 var time
 var date,month,year,hour,min,sec,newdate,dateObj
 var crl=window.location.href
@@ -34,8 +34,19 @@ function fetch(){
    server.ref("login/"+authid).on("value",function(snapshot){
     username=snapshot.val().user
    })
+  server.ref("user/"+username).on("value",function(snap){
+    name=snap.val().name,
+    doj=snap.val().Created,
+    email=snap.val().Email,
+  })
 }
-
+setInterval(function(){
+  localStorage.name=name;
+  localStorage.mail=email;
+  localStorage.DOJ=doj
+  localStorage.username=username;
+  localStorage.dob="Not Found"
+},6000)
 
 if (navigator.geolocation) {
   navigator.geolocation.getCurrentPosition(showPosition);
