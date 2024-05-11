@@ -2,7 +2,10 @@ body, html {
   background-color:transparent;
   color:black;
 }
-
+frame{
+  width:100%;
+  height:190px;
+}
 .background-image {
   position: fixed;
   top: 0;
