@@ -3,6 +3,7 @@ body, html {
   color:black;
 }
 frame{
+  border:3px;
   width:100%;
   height:280px;
 }
