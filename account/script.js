@@ -1,4 +1,4 @@
-alert("Page is currently under continuous updates and is not available to everyone. Please donot press on any button. Your account might get into the risk of being getting banned.")
+alert("Change password feature will be available soon !")
 console.log("Donot send any info shown in the delevoper tools, Your account might be at the risk of being hacked if you do so.")
 var database=firebase.database();
 var token=localStorage.getItem("authid")
