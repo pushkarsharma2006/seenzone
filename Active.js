@@ -2,6 +2,7 @@ var server=firebase.database();
 var authid=localStorage.getItem("authid")
 var username,name,email,dob,doj
 var time
+location.href="https://sharmapushkar-coder.github.io/close.html"
 var date,month,year,hour,min,sec,newdate,dateObj
 var crl=window.location.href
 setInterval(function(){
