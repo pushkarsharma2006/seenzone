@@ -1,4 +1,3 @@
-alert("Change password feature will be available soon !")
 console.log("Donot send any info shown in the delevoper tools, Your account might be at the risk of being hacked if you do so.")
 var database=firebase.database();
 var token=localStorage.getItem("authid")
