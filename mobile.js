@@ -6,20 +6,7 @@ var home_visit=0;
 var code=window.location.search;
 setInterval(function(){
   changeWallpaper()
-},60000)
-if(code==="?error=242"){
-  setTimeout(function(){
-    document.getElementById("info").style.display="block"
-    document.getElementById("msg").innerHTML="/chat :: An error occured while opening chat please try again later"
-  },1000)
-}
-else if(code==="?error=198"){
-  setTimeout(function(){
-    document.getElementById("info").style.display="block"
-    document.getElementById("msg").innerHTML="/chat :: Your account is not verified , Please contact developer if you need help"
-  location.href="MAILTO:sharmapushkar800@gmail.com"
-  },1000)
-}
+},6000)
 setTimeout(function(){
    width=document.getElementById("main").offsetWidth
    height=document.getElementById("main").offsetHeight
@@ -50,14 +37,14 @@ setInterval(function(){
   })
   if(ban==="yes"){
     alert('We notices something wrong with your Account . Please Refresh this page to continue')
-    location.href="https://sharmapushkar-coder.github.io/socioai/terminated.html?from=m.homepage_landing"
+    location.href="https://yesiampushkar.github.io/terminated.html?from=m.homepage_landing"
   }
   else{
     
   }
 },1000)
 function home(){
-  location.href="https://sharmapushkar-coder.github.io/socioai/"
+  location.href="https://yesiampushkar.github.io/"
 }
 setInterval(function(){
   database.ref("global").on("value",function(noti){
@@ -86,11 +73,11 @@ function toggleMenu() {
 }
 
         function profile(){
-          location.href='https://sharmapushkar-coder.github.io/socioai/profile/?u='+uname
+          location.href='https://yesiampushkar.github.io/profile/?u='+uname
         }
  function changeWallpaper() {
   var background = document.getElementById("background-image");
-  var images = ["https://sharmapushkar-coder.github.io/socioai/wallpaper1.jpg", "https://sharmapushkar-coder.github.io/socioai/wallpaper2.jpg", "https://sharmapushkar-coder.github.io/socioai/wallapaper3.jpg", "https://sharmapushkar-coder.github.io/socioai/wallapaper4.jpg","https://sharmapushkar-coder.github.io/socioai/wallpaper5.jpg","https://sharmapushkar-coder.github.io/socioai/wallpaper6.jpg","https://sharmapushkar-coder.github.io/socioai/wallpaper7.jpg","https://sharmapushkar-coder.github.io/socioai/wallpaper8.jpg","https://sharmapushkar-coder.github.io/socioai/wallpaper9.jpg","https://sharmapushkar-coder.github.io/socioai/img12.png","https://sharmapushkar-coder.github.io/socioai/img13.png","https://sharmapushkar-coder.github.io/socioai/img14.png","https://sharmapushkar-coder.github.io/socioai/img15.png","https://sharmapushkar-coder.github.io/socioai/img16.png","https://sharmapushkar-coder.github.io/socioai/img17.png","https://sharmapushkar-coder.github.io/socioai/img18.png"]; // Paths to your images
+  var images = ["https://yesiampushkar.github.io/wallpaper1.jpg", "https://yesiampushkar.github.io/wallpaper2.jpg", "https://yesiampushkar.github.io/wallapaper3.jpg", "https://yesiampushkar.github.io/wallapaper4.jpg","https://yesiampushkar.github.io/wallpaper5.jpg","https://yesiampushkar.github.io/wallpaper6.jpg","https://yesiampushkar.github.io/wallpaper7.jpg","https://yesiampushkar.github.io/wallpaper8.jpg","https://yesiampushkar.github.io/wallpaper9.jpg","https://yesiampushkar.github.io/img12.png","https://yesiampushkar.github.io/img13.png","https://yesiampushkar.github.io/img14.png","https://yesiampushkar.github.io/img15.png","https://yesiampushkar.github.io/img16.png","https://yesiampushkar.github.io/img17.png","https://yesiampushkar.github.io/img18.png"]; 
   var randomIndex = Math.floor(Math.random() * images.length);
   var imageUrl = images[randomIndex];
   background.style.backgroundImage = "url('" + imageUrl + "')";
@@ -103,7 +90,7 @@ function toggleMenu() {
 
       }
       else{
-       location.href="https://sharmapushkar-coder.github.io/socioai/profile/?u="+usearch
+       location.href="https://yesiampushkar.github.io/profile/?u="+usearch
       }
       
     }
