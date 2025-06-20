@@ -9,23 +9,11 @@ var notification
 var d_width=screen.width;
 if(d_width<800){
   device="mobile"
-  location.href="https://sharmapushkar-coder.github.io/socioai/mobile.html"
+  location.href="https://yesiampushkar.github.io/seenzone/mobile.html"
 }
 else{
  devip="Service removed from page"
   device="pc"
-}
-var code=window.location.search;
-if(code==="?error=242"){
-  setTimeout(function(){
-    alert("Ther was an error while launching an application :chat ERRORCODE=242")
-  },100)
-}
-else if(code==="?error=198"){
-  setTimeout(function(){
-    location.href="MAILTO:sharmapushkar800@gmail.com?Subject=Account%20Verification%20Request%20for%20my%20Disclosure%20Account"
-    alert("Your account is not verified to use some services please mail the developers")
-  },100)
 }
 setTimeout(function(){
    width=document.getElementById("main").offsetWidth
@@ -34,7 +22,7 @@ setTimeout(function(){
 
 var ban=false;
 if(typeof authtoken==="undefined"||authtoken===null || authtoken===""){
-  location.href="https://sharmapushkar-coder.github.io/socioai/login"
+  location.href="https://yesiampushkar.github.io/seenzone/login"
 }
 else{
   database.ref("login/"+authtoken).on("value",function(snap){
@@ -56,7 +44,7 @@ setInterval(function(){
     ban=data.val().ban
   })
   if(ban==="yes"){
-    location.href="https://sharmapushkar-coder.github.io/socioai/terminated.html?from=homepage_landing"
+    location.href="https://yesiampushkar.github.io/seenzone/terminated.html?from=homepage_landing"
   }
   else{
     
@@ -93,7 +81,7 @@ setInterval(function(){
 
 function search(){
   var sname=document.getElementById('s').value;
-  location.href='https://sharmapushkar-coder.github.io/socioai/profile/?u='+sname
+  location.href='https://yesiampushkar.github.io/seenzone/profile/?u='+sname
 }
 function toggleMenu() {
   var menu = document.getElementById("menu");
