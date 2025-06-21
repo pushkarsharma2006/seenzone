@@ -3,7 +3,7 @@ var database=firebase.database();
 var token=localStorage.getItem("authid")
 
 if(typeof token==="undefined"||token===""||token===null){
-  location.href="https://sharmapushkar-coder.github.io/socioai/login/?continue=https://sharmapushkar-coder.github.io/socioai/account"
+  location.href="https://pushkarsharma2006.github.io/seenzone/login/?continue=https://sharmapushkar-coder.github.io/socioai/account"
 }
 else{
   var name=localStorage.getItem("name");
