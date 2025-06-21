@@ -13,7 +13,7 @@ setTimeout(function(){
         if (Notification.permission === 'granted') {
           var notification = new Notification('Message sent or received', {
           body: 'Get more out of a chat with premium. BUY NOW',
-          icon: 'https://sharmapushkar-coder.github.io/socioai/LOGO.png'
+          icon: 'https://pushkarsharma2006.github.io/seenzone/logo.png'
         });
 
         notification.onclick = function() {
@@ -33,7 +33,7 @@ else {
   }
 }
 if(typeof authtoken==="undefined"||authtoken===null||authtoken===""){
-  location.href="https://sharmapushkar-coder.github.io/socioai/login"
+  location.href="https://pushkarsharma2006.github.io/seenzone/login"
 }
 database.ref("login/"+authtoken).on("value",function(data){
   user_data_name=data.val().user
@@ -42,7 +42,7 @@ database.ref("login/"+authtoken).on("value",function(data){
 setTimeout(function(){
   if(typeof user_data_name==="undefined"||user_data_name===null||user_data_name===""){
     alert("Login failed please login again !")
-    location.href="https://sharmapushkar-coder.github.io/socioai/"
+    location.href="https://pushkarsharma2006.github.io/seenzone/"
   }
   else{
     database.ref("users/"+user_data_name).on("value",function(deta){
@@ -153,14 +153,14 @@ database.ref("chat").on("child_removed",function(chat){
 
 
 function l(){
-  location.href='https://sharmapushkar-coder.github.io/chat/login/?authid='+authtoken
+  location.href='https://pushkarsharma2006.github.io/chat/login/?authid='+authtoken
 }
 setInterval(function(){
   database.ref("user/"+user_data_name).on("value",function(d){
     ban=d.val().ban
   })
   if(ban==="yes"){
-    location.href='https://sharmapushkar-coder.github.io/terminated.html'
+    location.href='https://pushkarsharma2006.github.io/seenzone/terminated.html'
   }
   else{
     
