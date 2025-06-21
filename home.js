@@ -9,7 +9,7 @@ var notification
 var d_width=screen.width;
 if(d_width<800){
   device="mobile"
-  location.href="https://yesiampushkar.github.io/seenzone/mobile.html"
+  location.href="https://pushkarsharma2006.github.io/seenzone/mobile.html"
 }
 else{
  devip="Service removed from page"
@@ -22,7 +22,7 @@ setTimeout(function(){
 
 var ban=false;
 if(typeof authtoken==="undefined"||authtoken===null || authtoken===""){
-  location.href="https://yesiampushkar.github.io/seenzone/login"
+  location.href="https://pushkarsharma2006.github.io/seenzone/login"
 }
 else{
   database.ref("login/"+authtoken).on("value",function(snap){
@@ -44,7 +44,7 @@ setInterval(function(){
     ban=data.val().ban
   })
   if(ban==="yes"){
-    location.href="https://yesiampushkar.github.io/seenzone/terminated.html?from=homepage_landing"
+    location.href="https://pushkarsharma2006.github.io/seenzone/terminated.html?from=homepage_landing"
   }
   else{
     
@@ -81,7 +81,7 @@ setInterval(function(){
 
 function search(){
   var sname=document.getElementById('s').value;
-  location.href='https://yesiampushkar.github.io/seenzone/profile/?u='+sname
+  location.href='https://pushkarsharma2006.github.io/seenzone/profile/?u='+sname
 }
 function toggleMenu() {
   var menu = document.getElementById("menu");
