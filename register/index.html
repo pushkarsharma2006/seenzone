@@ -1,65 +1,139 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://cdn.tailwindcss.com" rel="stylesheet">
-    <link href="style.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <title>Welcome to SeenZone</title>
-  <link href="style.css" rel="stylesheet" type="text/css" />
-  <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-app.js"></script> 
-  <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-database.js"></script>
-  <script>
-  var firebaseConfig = {
-  apiKey: "AIzaSyDvekSO0AspCgWZyIW4fPH68nlgC1vk5bU",
-  authDomain: "dr-bot-cvsd.firebaseapp.com",
-  databaseURL: "https://dr-bot-cvsd-default-rtdb.firebaseio.com",
-  projectId: "dr-bot-cvsd",
-  storageBucket: "dr-bot-cvsd.appspot.com",
-  messagingSenderId: "309042927466",
-  appId: "1:309042927466:web:add9de192718a550e43713"
-  };
-  firebase.initializeApp(firebaseConfig);
-</script>
-</head>
-<body class="h-screen overflow-hidden flex items-center justify-center">
-  <div class="bg-white w-full lg:py-20 main-wrapper">
-    <div class="flex flex-col items-center justify-between max-w-7xl mx-auto lg:flex-row">
-      <div class="flex flex-col items-center w-full lg:flex-row">
-        <!-- IMAGE SECTION -->
-        <div class="w-full image-container bg-cover relative max-w-md lg:max-w-2xl lg:w-7/12">
-          <div class="flex flex-col items-center justify-center w-full h-full relative lg:pr-10">
-            <img src="https://res.cloudinary.com/macxenon/image/upload/v1631570592/Run_-_Health_qcghbu.png" class="btn-" />
-          </div>
-        </div>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Signup - SeenZone</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
 
-        <!-- FORM SECTION -->
-        <div class="w-full mt-10 lg:mt-0 lg:w-5/12 form-container">
-          <div class="flex flex-col items-start justify-start p-10 bg-white shadow-2xl rounded-xl relative z-10">
-            <p class="w-full text-4xl font-bold text-center leading-snug font-serif">Sign up for an account</p>
-            <div class="w-full mt-6 space-y-8">
-              <div class="relative">
-                <p class="bg-white px-2 -mt-3 ml-2 font-medium text-gray-600 absolute">Username</p>
-                <input placeholder="John" type="text" class="border placeholder-gray-400 focus:outline-none focus:border-indigo-600 w-full p-4 mt-2 text-base bg-white border-gray-300 rounded-md" />
-              </div>
-              <div class="relative">
-                <p class="bg-white px-2 -mt-3 ml-2 font-medium text-gray-600 absolute">Email</p>
-                <input placeholder="123@ex.com" type="email" class="border placeholder-gray-400 focus:outline-none focus:border-indigo-600 w-full p-4 mt-2 text-base bg-white border-gray-300 rounded-md" />
-              </div>
-              <div class="relative">
-                <p class="bg-white px-2 -mt-3 ml-2 font-medium text-gray-600 absolute">Password</p>
-                <input placeholder="Password" type="password" class="border placeholder-gray-400 focus:outline-none focus:border-indigo-600 w-full p-4 mt-2 text-base bg-white border-gray-300 rounded-md" />
-              </div>
-              <div class="relative">
-                <button class="w-full p-4 text-xl font-medium text-white bg-indigo-500 rounded-lg transition duration-200 hover:bg-indigo-600">Submit</button>
-              </div>
-            </div>
+    body, html {
+      height: 100%;
+      background-color: #f4f4f4;
+    }
+
+    .container {
+      display: flex;
+      height: 100vh;
+    }
+
+    .left {
+      width: 50%;
+      background: url('https://pushkarsharma2006.github.io/seenzone/logo.png') center center no-repeat;
+      background-size: contain;
+    }
+
+    .right {
+      width: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 40px;
+      background-color: white;
+    }
+
+    .form-box {
+      width: 100%;
+      max-width: 400px;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+      font-size: 28px;
+      color: #333;
+    }
+
+    input {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+
+    .checkbox {
+      display: flex;
+      align-items: center;
+      margin: 10px 0;
+    }
+
+    .checkbox input {
+      width: auto;
+      margin-right: 10px;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      background-color: #3897f0;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .login-link {
+      margin-top: 15px;
+      text-align: center;
+    }
+
+    .login-link a {
+      color: #3897f0;
+      text-decoration: none;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+      }
+
+      .left {
+        display: none;
+      }
+
+      .right {
+        width: 100%;
+        height: 100vh;
+        padding: 20px;
+      }
+
+      .form-box {
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="left"></div>
+    <div class="right">
+      <div class="form-box">
+        <h2>Create your account</h2>
+        <form>
+          <input type="text" placeholder="Full Name" required />
+          <input type="email" placeholder="Email" required />
+          <input type="password" placeholder="Password" required />
+          <input type="password" placeholder="Confirm Password" required />
+
+          <div class="checkbox">
+            <input type="checkbox" id="terms" required />
+            <label for="terms">I agree to the Terms and Conditions</label>
           </div>
-        </div>
-        <!-- END FORM -->
+
+          <button type="submit">Sign Up</button>
+
+          <div class="login-link">
+            Already have an account? <a href="#">Log In</a>
+          </div>
+        </form>
       </div>
     </div>
   </div>
 </body>
+</html>
