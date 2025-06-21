@@ -1,5 +1,6 @@
 var server= firebase.database();
 var token=localStorage.getItem('authid')
+logout();
 function logout(){
   if(token===""){
     location.href='https://pushkarsharma2006.github.io/seenzone/?F=lgo&response=100'
