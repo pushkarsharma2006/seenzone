@@ -1,65 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>Profile - socioai</title>
-	<link href="colors.css" rel="stylesheet">
-  <link href="style.css" rel="stylesheet" type="text/css">
-  <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-app.js"></script> 
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Profile - SeenZone</title>
+  <link href="style.css" rel="stylesheet">
+
+  <!-- Firebase -->
+  <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-database.js"></script>
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1750533681824200"crossorigin="anonymous"></script>
+
+  <!-- AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1750533681824200" crossorigin="anonymous"></script>
+
   <script>
-  var firebaseConfig = {
-  apiKey: "AIzaSyDvekSO0AspCgWZyIW4fPH68nlgC1vk5bU",
-  authDomain: "dr-bot-cvsd.firebaseapp.com",
-  databaseURL: "https://dr-bot-cvsd-default-rtdb.firebaseio.com",
-  projectId: "dr-bot-cvsd",
-  storageBucket: "dr-bot-cvsd.appspot.com",
-  messagingSenderId: "309042927466",
-  appId: "1:309042927466:web:add9de192718a550e43713"
-  };
-  firebase.initializeApp(firebaseConfig);
-</script>
+    var firebaseConfig = {
+      apiKey: "AIzaSyDvekSO0AspCgWZyIW4fPH68nlgC1vk5bU",
+      authDomain: "dr-bot-cvsd.firebaseapp.com",
+      databaseURL: "https://dr-bot-cvsd-default-rtdb.firebaseio.com",
+      projectId: "dr-bot-cvsd",
+      storageBucket: "dr-bot-cvsd.appspot.com",
+      messagingSenderId: "309042927466",
+      appId: "1:309042927466:web:add9de192718a550e43713"
+    };
+    firebase.initializeApp(firebaseConfig);
+  </script>
 </head>
 
 <body>
   <script src="script.js"></script>
-   <button onclick="window.history.back()"style="position:fixed;bottom:10px;">Go back</button>
+
+  <button onclick="window.history.back()" class="back-btn">Go back</button>
+
   <div class="main-content">
-		<div class="user">
-			<img src="https://storage.googleapis.com/replit/images/1665860629627_c3e727f674a2ed1a4b7a00f3d8b18120.gif" alt="pfp" class="pfp">
-			<div>
-				<span class="username"><b id="username">Guest</b></span>
-				<div class="description"id="since">Basic User</div>
-			</div>
-		</div>
+    <div class="user">
+      <img src="https://storage.googleapis.com/replit/images/1665860629627_c3e727f674a2ed1a4b7a00f3d8b18120.gif" alt="pfp" class="pfp">
+      <div>
+        <span class="username"><b id="username">Guest</b></span>
+        <div class="description" id="since">Basic User</div>
+      </div>
+    </div>
 
-		<div class="sections">
-			<div class="section">
-				<div>
-					<div class="heading">About this User</div>
-          <div class="text aboutme"><h3 id="premium"style="background-color:black;color:white;">SYNCRONIZING...</h3></div>
-					<div class="text aboutme"><h3 id="name"></h3></div>
-          <div class="text aboutme"><h3 id="laston"style="background-color:white;color:black;"></h3></div>
-				</div>
+    <div class="sections">
+      <div class="section">
+        <div class="heading">About this User</div>
+        <div class="text aboutme"><h3 id="premium">SYNCRONIZING...</h3></div>
+        <div class="text aboutme"><h3 id="name"></h3></div>
+        <div class="text aboutme"><h3 id="laston"></h3></div>
+      </div>
 
-	
-			<div class="section">
-				<div class="heading">Social </div>
-				<div class="projects"><b id="social"></b></div>
-			</div>
-		</div>
-		
-  
+      <div class="section">
+        <div class="heading">SeenZone</div>
+        <div class="projects"><b id="social"></b></div>
+      </div>
+    </div>
 
-
-
-</div>
-<br></br>
-<br></br>
-<div class="search">
-   <input class="search" placeholder="Search Other on Socioai"id="inputuser">
-   <button onclick="search()"style="color:black;">Search🔍</button>
- </div>
-  <br></br>
-
+    <div class="search">
+      <input class="search" placeholder="Search Other on SeenZone" id="inputuser">
+      <button onclick="search()">Search 🔍</button>
+    </div>
+  </div>
 </body>
+</html>
