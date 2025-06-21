@@ -5,7 +5,7 @@ if(typeof ul==="undefined"||ul===null||ul===""){
 }
 else{
   alert("Looks like you are already logged in")
-  location.href="https://yesiampushkar.github.io/seenzone/"
+  location.href="https://pushkarsharma2006.github.io/seenzone/"
 }
 var auth_pass
 var auth_token=""
@@ -45,10 +45,10 @@ function login(){
       localStorage.authid=auth_token;
       setTimeout(function(){
         if(typeof url==="undefined"||url===null||url===""){
-          location.href="https://yesiampushkar.github.io/seenzone/"
+          location.href="https://pushkarsharma2006.github.io/seenzone/"
           document.getElementById("info").innerHTML="Login success <button onclick='window.history.back()'>Click here</button>"
         }
-        else if(url.includes("https://yesiampushkar.github.io/")){
+        else if(url.includes("https://pushkarsharma2006.github.io/seenzone/")){
           a();
         }
         else{
@@ -87,7 +87,7 @@ function a(){
   location.href=url+"?authid="+auth_token
 }
 function b(){
-  location.href="https://yesiampushkar.github.io/seenzone/"
+  location.href="https://pushkarsharma2006.github.io/seenzone/"
 }
 
 
