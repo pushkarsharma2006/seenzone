@@ -2,7 +2,7 @@ var database=firebase.database();
 var user_bar_name=window.location.search
 var user_bar=user_bar_name.replace('?u=','');
 var active
-var name ="Unable to find the requested user , Make sure this account really exist <a href=''>Try Again</a>"
+var name ="Error occured while looking for this user <a href=''>Try Again</a>"
 var clas
 var insta
 var made
@@ -56,7 +56,7 @@ setTimeout(function(){
 },5000)
 function search(){
   var user=document.getElementById("inputuser").value;
-  location.href="https://sharmapushkar-coder.github.io/socioai/profile/?u="+user
+  location.href="https://yesiampushkar.github.io/seenzone/profile/?u="+user
 }
 
 
