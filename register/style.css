@@ -1,27 +1,37 @@
-body{
-  background-color:black;
-  color:white
-}
-.info-bar{
-  background-color:white;
-  color:black;
-  width:60%;
-  box-shadow: yellow;
-  padding:2px 2px 2px 2px;
-  border-radius:5px;
-}
-button{
-  background-color:yellow;
-  color:black;
-  border:1px solid white;
-  border-radius:0px;
-  padding:10px 10px 10px;
-}
-input{
-  width:60%;
-  height:29px;
-  background-color:black;
-  color:yellow;
-  text-align:center;
-  border-radius:5px;
-}
+<style>
+  /* Custom font from Google Fonts */
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
+  body {
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .shadow-2xl {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1) !important;
+  }
+
+  .btn- {
+    transition: transform 0.3s ease;
+  }
+
+  .btn-:hover {
+    transform: scale(1.05);
+  }
+
+  input:focus {
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.3); /* Tailwind indigo-500 outline */
+  }
+
+  .bg-indigo-500 {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+  }
+
+  .bg-indigo-500:hover {
+    background: linear-gradient(135deg, #5a67d8 0%, #6b46c1 100%) !important;
+  }
+
+  .text-4xl {
+    font-weight: 700 !important;
+    letter-spacing: 1px;
+  }
+</style>
