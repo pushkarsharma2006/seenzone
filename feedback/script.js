@@ -77,5 +77,5 @@ function autofil(){
 
 
 function login(){
-  location.href="https://yesiampushkar.github.io/seenzone/"
+  location.href="https://pushkarsharma2006.github.io/seenzone/"
 }
