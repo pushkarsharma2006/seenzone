@@ -37,14 +37,14 @@ setInterval(function(){
   })
   if(ban==="yes"){
     alert('We notices something wrong with your Account . Please Refresh this page to continue')
-    location.href="https://yesiampushkar.github.io/seenzone/terminated.html?from=m.homepage_landing"
+    location.href="https://pushkarsharma2006.github.io/seenzone/terminated.html?from=m.homepage_landing"
   }
   else{
     
   }
 },1000)
 function home(){
-  location.href="https://yesiampushkar.github.io/seenzone"
+  location.href="https://pushkarsharma2006.github.io/seenzone/"
 }
 setInterval(function(){
   database.ref("global").on("value",function(noti){
@@ -73,11 +73,11 @@ function toggleMenu() {
 }
 
         function profile(){
-          location.href='https://yesiampushkar.github.io/seenzone/profile/?u='+uname
+          location.href='https://pushkarsharma2006.github.io/seenzone/profile/?u='+uname
         }
  function changeWallpaper() {
   var background = document.getElementById("background-image");
-  var images = ["https://yesiampushkar.github.io/wallpaper1.jpg", "https://yesiampushkar.github.io/seenzone/wallpaper2.jpg", "https://yesiampushkar.github.io/seenzone/wallapaper3.jpg", "https://yesiampushkar.github.io/seenzone/wallapaper4.jpg","https://yesiampushkar.github.io/seenzone/wallpaper5.jpg","https://yesiampushkar.github.io/seenzone/wallpaper6.jpg","https://yesiampushkar.github.io/seenzone/wallpaper7.jpg","https://yesiampushkar.github.io/seenzone/wallpaper8.jpg","https://yesiampushkar.github.io/seenzone/wallpaper9.jpg","https://yesiampushkar.github.io/seenzone/img12.png","https://yesiampushkar.github.io/seenzone/img13.png","https://yesiampushkar.github.io/seenzone/img14.png","https://yesiampushkar.github.io/seenzone/img15.png","https://yesiampushkar.github.io/seenzone/img16.png","https://yesiampushkar.github.io/seenzone/img17.png","https://yesiampushkar.github.io/seenzone/img18.png"]; 
+  var images = ["https://pushkarsharma2006.github.io/seenzone/wallpaper1.jpg", "https://pushkarsharma2006.github.io/seenzone/seenzone/wallpaper2.jpg", "https://pushkarsharma2006.github.io/seenzone/seenzone/wallapaper3.jpg", "https://pushkarsharma2006.github.io/seenzone/seenzone/wallapaper4.jpg","https://pushkarsharma2006.github.io/seenzone/seenzone/wallpaper5.jpg","https://pushkarsharma2006.github.io/seenzone/seenzone/wallpaper6.jpg","https://pushkarsharma2006.github.io/seenzone/seenzone/wallpaper7.jpg","https://pushkarsharma2006.github.io/seenzone/seenzone/wallpaper8.jpg","https://pushkarsharma2006.github.io/seenzone/seenzone/wallpaper9.jpg","https://pushkarsharma2006.github.io/seenzone/seenzone/img12.png","https://pushkarsharma2006.github.io/seenzone/seenzone/img13.png","https://pushkarsharma2006.github.io/seenzone/seenzone/img14.png","https://pushkarsharma2006.github.io/seenzone/seenzone/img15.png","https://pushkarsharma2006.github.io/seenzone/seenzone/img16.png","https://pushkarsharma2006.github.io/seenzone/seenzone/img17.png","https://pushkarsharma2006.github.io/seenzone/seenzone/img18.png"]; 
   var randomIndex = Math.floor(Math.random() * images.length);
   var imageUrl = images[randomIndex];
   background.style.backgroundImage = "url('" + imageUrl + "')";
@@ -90,7 +90,7 @@ function toggleMenu() {
 
       }
       else{
-       location.href="https://yesiampushkar.github.io/seenzone/profile/?u="+usearch
+       location.href="https://pushkarsharma2006.github.io/seenzone/profile/?u="+usearch
       }
       
     }
