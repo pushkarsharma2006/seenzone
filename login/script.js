@@ -5,7 +5,7 @@ if(typeof ul==="undefined"||ul===null||ul===""){
 }
 else{
   alert("Looks like you are already logged in")
-  location.href="https://sharmapushkar-coder.github.io/socioai/"
+  location.href="https://yesiampushkar.github.io/seenzone/"
 }
 var auth_pass
 var auth_token=""
@@ -14,7 +14,7 @@ var login_ip
 var redirect=window.location.search
 var url=redirect.replace('?continue=','')
 console.log("user will be redirected to url--->"+url)
-document.title="Login to continue on socioai"
+document.title="Login to continue on SeenZone"
 var user_pass
 var user_ban
 var user_name
@@ -45,10 +45,10 @@ function login(){
       localStorage.authid=auth_token;
       setTimeout(function(){
         if(typeof url==="undefined"||url===null||url===""){
-          location.href="https://sharmapushkar-coder.github.io/socioai/?lf=Login"
+          location.href="https://yesiampushkar.github.io/seenzone/"
           document.getElementById("info").innerHTML="Login success <button onclick='window.history.back()'>Click here</button>"
         }
-        else if(url.includes("https://sharmapushkar-coder.github.io/")){
+        else if(url.includes("https://yesiampushkar.github.io/")){
           a();
         }
         else{
@@ -87,7 +87,7 @@ function a(){
   location.href=url+"?authid="+auth_token
 }
 function b(){
-  location.href="https://sharmapushkar-coder.github.io/socioai/"
+  location.href="https://yesiampushkar.github.io/seenzone/"
 }
 
 
