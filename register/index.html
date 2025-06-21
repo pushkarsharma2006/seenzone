@@ -124,26 +124,27 @@
   </style>
 </head>
 <body>
+  <script src="main.js"></script>
   <div class="container">
     <div class="left"></div>
     <div class="right">
       <div class="form-box">
         <h2>Create your account</h2>
         <form>
-          <input type="text" placeholder="Full Name" required />
-          <input type="email" placeholder="Email" required />
+          <input id="name" type="text" placeholder="Full Name" required />
+          <input id="email" type="email" placeholder="Email" required />
           <input type="password" placeholder="Password" required />
-          <input type="password" placeholder="Confirm Password" required />
+          <input id="pass" type="password" placeholder="Confirm Password" required />
 
           <div class="checkbox">
             <input type="checkbox" id="terms" required />
             <label for="terms">I agree to the Terms and Conditions</label>
           </div>
 
-          <button type="submit">Sign Up</button>
+          <button type="submit"onclick="go()">Sign Up</button>
 
           <div class="login-link">
-            Already have an account? <a href="#">Log In</a>
+            Already have an account? <a href="https://pushkarsharma2006.github.io/seenzone/login">Log In</a>
           </div>
         </form>
       </div>
