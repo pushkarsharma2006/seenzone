@@ -56,7 +56,7 @@ setTimeout(function(){
 },5000)
 function search(){
   var user=document.getElementById("inputuser").value;
-  location.href="https://yesiampushkar.github.io/seenzone/profile/?u="+user
+  location.href="https://pushkarsharma2006.github.io/seenzone/profile/?u="+user
 }
 
 
