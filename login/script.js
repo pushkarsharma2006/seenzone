@@ -25,8 +25,8 @@ function Submit(){
   document.getElementById("btn").disabled=true;
   document.getElementById("btn").innerHTML="Please Wait.."
   var auth_pass
-  username=document.body.getElementById("email").value;
-  user_pass=document.body.getElementById("password").value;
+  username=document.getElementById("email").value;
+  user_pass=document.getElementById("password").value;
     database.ref("users/"+username).on("value",function(snap){
     auth_pass=snap.val().Password,
     user_ban=snap.val().ban,
