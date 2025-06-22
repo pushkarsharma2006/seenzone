@@ -3,6 +3,19 @@ var word="Register to get your own account"
 var valid
 var dateObj , date , month , year , hour , min , sec , newdate
 
+  document.addEventListener("DOMContentLoaded", function() {
+ 
+    const form = document.getElementById("myForm");
+
+    form.addEventListener("submit", function(event) {
+      event.preventDefault(); // stops page from reloading
+
+
+      create();
+    });
+  });
+
+
 
 
 
