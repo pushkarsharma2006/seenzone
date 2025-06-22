@@ -45,7 +45,7 @@ function create(){
         'name':Name,
         'Email':email,
         'username':username,
-        'Password':setps,
+        'Password':setpa,
         'Created':newdate,
         'verified':'yes',
         'ban':'no',
