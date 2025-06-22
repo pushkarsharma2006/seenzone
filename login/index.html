@@ -115,19 +115,20 @@
   </style>
 </head>
 <body>
+  <script src="script.js"></script>
   <div class="container">
     <div class="left"></div>
     <div class="right">
       <div class="form-box">
         <h2>Welcome back 👋</h2>
         <form>
-          <input type="email" placeholder="Email" required />
-          <input type="password" placeholder="Password" required />
-          <button type="submit">Log In</button>
+          <input id="email"type="email" placeholder="Email" required />
+          <input id="password" type="password" placeholder="Password" required />
+          <button type="submit"onclick="Submit()">Log In</button>
 
           <div class="extra-links">
             <a href="#">Forgot Password?</a>
-            <a href="#">Don’t have an account? Sign Up</a>
+            <a href="https://pushkarsharma2006.github.io/seenzone/register/?f=login">Don’t have an account? Sign Up</a>
           </div>
         </form>
       </div>
