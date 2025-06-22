@@ -48,7 +48,7 @@ function Submit(){
         location.href="https://pushkarsharma2006.github.io/seenzone/";
       },4000)
     }
-  ),5000}
+  },5000)
   
 
 
