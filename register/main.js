@@ -21,11 +21,14 @@ var dateObj , date , month , year , hour , min , sec , newdate
 
 
 function create(){
+  document.getElementById("btn").disabled=true;
+  document.getElementById("btn").innerHTML="Please Wait.."
+  var username=document.getElementById("appname").value;
   var Name=document.getElementById("name").value;
   var email=document.getElementById("email").value;
   var setpa=document.getElementById("pass").value;
 
- database.ref("users/"+email).on("value",function(data){
+ database.ref("users/"+username).on("value",function(data){
        valid=data.val().name
     })
     setTimeout(function(){
@@ -38,7 +41,7 @@ function create(){
        min=dateObj.getMinutes();
        sec=dateObj.getSeconds();
        newdate = year + "/" + month + "/" + date+" at "+hour+":"+min+":"+sec;
-       database.ref("users/"+email).set({
+       database.ref("users/"+username).set({
         'name':Name,
         'Email':email,
         'username':username,
