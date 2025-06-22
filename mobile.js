@@ -4,13 +4,9 @@ var uname,width,height
 var device
 var home_visit=0;
 var code=window.location.search;
-setInterval(function(){
-  changeWallpaper()
-},6000)
 setTimeout(function(){
-   width=document.getElementById("main").offsetWidth
-   height=document.getElementById("main").offsetHeight
-},1000)
+  changeWallpaper();
+},2000)
 
 var ban=false;
 if(typeof authtoken==="undefined"||authtoken===null || authtoken===""){
