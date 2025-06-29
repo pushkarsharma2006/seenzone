@@ -10,7 +10,6 @@ function logout(){
       'user':null
     })
     setTimeout(function(){
-      alert("Logged Out successfully")
       localStorage.removeItem("authid")
       location.href="https://pushkarsharma2006.github.io/seenzone/?from=logout&&result=khudcheckkarlo"
     },5000)
