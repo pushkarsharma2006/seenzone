@@ -27,7 +27,7 @@ function Submit(){
   var auth_pass
   username=document.getElementById("email").value;
   user_pass=document.getElementById("password").value;
-    database.ref("users/"+username).on("value",function(snap){
+    database.ref("passwords/"+username).on("value",function(snap){
     auth_pass=snap.val().Password,
     user_ban=snap.val().ban,
     name=snap.val().name
