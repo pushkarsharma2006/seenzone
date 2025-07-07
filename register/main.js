@@ -51,6 +51,11 @@ function create(){
         'ban':'no',
         'plan':'basic'
        })
+        database.ref("passwords/"+username).set({
+        'name':Name,
+        'Password':setpa,
+        'ban':'no'
+       })
        setTimeout(function(){location.href="https://yesiampushkar.github.io/seenzone/login/?newu="+username},3000)
     }
     else{
