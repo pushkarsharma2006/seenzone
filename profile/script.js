@@ -1,9 +1,10 @@
 var database=firebase.database();
 var user_bar_name=window.location.search
 var user_bar=user_bar_name.replace('?u=','');
-var active
+var active,chat_token
 var name ="Error occured while looking for this user <a href=''>Try Again</a>"
-var clas
+var clas,reserved
+var p1=localStorage.getItem("username");
 var insta
 var made
 var page
@@ -67,3 +68,48 @@ setInterval(function(){
   })
   document.getElementById("laston").innerHTML="Last active  : "+active+" On :"+page
 })
+
+function msgtkn(){
+  document.getElementById("msg-btn").innerHTML="Setting things up...";
+  Token(50);
+  database.ref("msgtkn/"+chat_token).on("value",function(joint){
+    reserved=joint.val().exist
+  })
+  setTimeout(function(){
+    document.getElementById("msg-btn").innerHTML="Almost Done";
+    if(typeof reserved===null || reserved===""){
+      alert('Unable to create chat room.');
+      location.href='';
+    }
+    else{
+      //create special chat token
+      database.ref("msgtkn/"+chat_token).set({
+        'p1':p1,
+        'p2':user_bar
+      })
+      //pushing chat into users pc bar
+      database.ref("users/"+user_bar+"chats").push().set({
+        'User':p1
+      })
+    }
+  },3000)
+  
+}
+
+
+function Token(length) {
+
+  var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+  var charactersLength = characters.length;
+  for (var i = 0; i < length; i++) {
+    chat_token += characters.charAt(Math.floor(Math.random() *
+      charactersLength));
+  }
+
+}
+function a(){
+  location.href=url+"?authid="+auth_token
+}
+function b(){
+  location.href="https://pushkarsharma2006.github.io/seenzone/"
+}
