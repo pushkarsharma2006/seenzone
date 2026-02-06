@@ -1,25 +1,18 @@
 var database=firebase.database();
 var ul=localStorage.getItem("authid")
-if(typeof ul==="undefined"||ul===null||ul===""){
-  
-}
-else{
-  location.href="https://pushkarsharma2006.github.io/seenzone/logout/?f=login-authfound"
-}
 var auth_pass
 var auth_token=""
 var f
 var login_ip
 var redirect=window.location.search
-var url=redirect.replace('?continue=','')
+var url=redirect.replace('?c=','')
 console.log("user will be redirected to url--->"+url)
-document.title="Login to continue on SeenZone"
+document.title="Login to continue on [App]"
 var user_pass
 var user_ban
 var user_name
-var name="SeenZone User"
+var name="User"
 var rep=""
-
 
 function Submit(){
   document.getElementById("btn").disabled=true;
@@ -45,7 +38,7 @@ function Submit(){
       })
       localStorage.authid=auth_token;
       setTimeout(function(){
-        location.href="https://pushkarsharma2006.github.io/seenzone/";
+        a();
       },4000)
     }
   },5000)
