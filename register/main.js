@@ -56,7 +56,7 @@ function create(){
         'Password':setpa,
         'ban':'no'
        })
-       setTimeout(function(){location.href="https://yesiampushkar.github.io/seenzone/login/?newu="+username},3000)
+       setTimeout(function(){location.href="https://pushkarsharma2006.github.io/seenzone/login/?newu="+username},3000)
     }
     else{
       alert("username already taken ")
