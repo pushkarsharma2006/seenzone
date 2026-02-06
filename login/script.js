@@ -8,6 +8,9 @@ var redirect=window.location.search
 var url=redirect.replace('?c=','')
 console.log("user will be redirected to url--->"+url)
 document.title="Login to continue on [App]"
+if(typeof url==="undefined"||url===null||url===""){
+  location.href="https://sharmapushkar2006.github.io/ChatRooms/"
+}
 var user_pass
 var user_ban
 var user_name
@@ -15,18 +18,22 @@ var name="User"
 var rep=""
 
 function Submit(){
+  //code to disable buttons as soon as the function runs
   document.getElementById("btn").disabled=true;
   document.getElementById("btn").innerHTML="Please Wait.."
+  //loading needs for authentication
   var auth_pass
   username=document.getElementById("email").value;
   user_pass=document.getElementById("password").value;
-    database.ref("passwords/"+username).on("value",function(snap){
+  //fetching data from database
+  database.ref("passwords/"+username).on("value",function(snap){
     auth_pass=snap.val().Password,
     user_ban=snap.val().ban,
     name=snap.val().name
   })
+  //giving 4 sec time for data to be fetched from database and program to be executed after that
   setTimeout(function(){
-    localStorage.name=name
+    localStorage.name=username
     if(user_pass!=auth_pass){
       alert("INVALID CREDENTIALS")
       location.href=""
@@ -36,7 +43,6 @@ function Submit(){
       database.ref("login/"+auth_token).set({
         'user':username
       })
-      localStorage.authid=auth_token;
       setTimeout(function(){
         a();
       },4000)
