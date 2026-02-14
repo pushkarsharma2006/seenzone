@@ -56,7 +56,7 @@ function create(){
         'Password':setpa,
         'ban':'no'
        })
-       setTimeout(function(){location.href="history.back()"},3000)
+       setTimeout(function(){history.back()},3000)
     }
     else{
       alert("username already taken ")
